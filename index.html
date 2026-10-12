@@ -1,60 +1,70 @@
-```html
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ayan Gadget Hub</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f2f5fa;
-      color: #222;
-      text-align: center;
-    }
-    header {
-      background: #102a43;
-      color: white;
-      padding: 28px 10px;
-    }
-    header h1 { margin: 0; }
-    .content { padding: 35px 15px; }
-    .shop {
-      background: white;
-      max-width: 500px;
-      margin: auto;
-      padding: 25px;
-      border-radius: 14px;
-      box-shadow: 0 4px 15px #0001;
-    }
-    .order {
-      display: inline-block;
-      background: #20b858;
-      color: white;
-      padding: 13px 24px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ayan Gadget Hub | Online Gadget Shop</title>
+<meta name="description" content="Ayan Gadget Hub — trusted online gadget shop in Bangladesh.">
+<style>
+:root{--navy:#102a43;--blue:#1769aa;--green:#18a957;--bg:#f3f6fb;--ink:#18212b;--muted:#667085}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(120deg,#102a43,#1769aa);color:white;padding:24px 18px}
+.wrap{max-width:1100px;margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.brand{font-size:clamp(1.45rem,4vw,2rem);font-weight:800;margin:0}.tag{margin:6px 0 0;color:#dbeafe}
+.btn{display:inline-block;border:0;border-radius:10px;padding:11px 16px;font-weight:700;text-decoration:none;cursor:pointer;background:var(--blue);color:#fff}
+.btn.green{background:var(--green)}.btn.light{background:white;color:var(--navy)}.btn.red{background:#b42318}
+main{padding:26px 16px 50px}.intro{text-align:center;padding:18px 8px 26px}.intro h2{font-size:clamp(1.5rem,4vw,2.1rem);margin:0 0 8px}.intro p{color:var(--muted);margin:0}
+.toolbar{display:flex;gap:12px;flex-wrap:wrap;margin:0 0 18px}.toolbar input{flex:1;min-width:180px}
+input,textarea,select{width:100%;padding:12px;border:1px solid #d0d5dd;border-radius:9px;font:inherit;background:#fff;color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.card{background:#fff;border:1px solid #e6eaf0;border-radius:15px;overflow:hidden;box-shadow:0 5px 18px #102a430b;display:flex;flex-direction:column}
+.photo{width:100%;height:190px;object-fit:cover;background:#e7edf5}.cardbody{padding:15px;display:flex;flex-direction:column;gap:8px;flex:1}.card h3{margin:0;font-size:1.08rem}.price{font-size:1.2rem;font-weight:800;color:#087443}.desc{color:var(--muted);font-size:.93rem;white-space:pre-wrap}.card .btn{margin-top:auto;text-align:center}
+.empty,.panel{background:white;border:1px solid #e6eaf0;border-radius:14px;padding:20px}.empty{text-align:center;color:var(--muted);grid-column:1/-1}
+.panel{margin:22px 0;display:none}.panel.show{display:block}.formgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.field label{display:block;font-weight:700;margin:0 0 6px}.field.full{grid-column:1/-1}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.note{font-size:.9rem;color:var(--muted);line-height:1.5}.status{padding:12px;border-radius:9px;background:#fff7e6;color:#7a4b00;margin:12px 0;display:none}.status.show{display:block}
+footer{text-align:center;padding:24px 16px;background:#102a43;color:#dbeafe}footer a{color:white}
+.hidden{display:none!important}
+@media(max-width:520px){.top{align-items:flex-start}.photo{height:170px}.btn{padding:10px 12px}}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Ayan Gadget Hub</h1>
-    <p>Your Trusted Online Gadget Shop</p>
-  </header>
-  <div class="content">
-    <div class="shop">
-      <h2>স্বাগতম!</h2>
-      <p>আপনার পছন্দের গ্যাজেট ও মোবাইল অ্যাকসেসরিজ খুঁজুন।</p>
-      <p>পণ্য অর্ডার করতে নিচের বাটনে চাপ দিন।</p>
-      <a class="order" href="https://wa.me/8801971177205">
-        WhatsApp-এ অর্ডার করুন
-      </a>
-    </div>
-  </div>
-</body>
-</html>
-```
-
+<header><div class="wrap top"><div><h1 class="brand">Ayan Gadget Hub</h1><p class="tag">Your Trusted Online Gadget Shop</p></div><a class="btn light" href="https://wa.me/8801971177205" target="_blank" rel="noopener">WhatsApp-এ যোগাযোগ</a></div></header>
+<main class="wrap">
+<section class="intro"><h2>আপনার পছন্দের গ্যাজেট খুঁজুন</h2><p>মোবাইল অ্যাকসেসরিজ ও গ্যাজেট — অর্ডার করুন সহজেই।</p></section>
+<div class="toolbar"><input id="search" type="search" placeholder="পণ্যের নাম দিয়ে খুঁজুন…"><button id="adminToggle" class="btn" type="button">Admin Login</button></div>
+<div id="status" class="status"></div>
+<section id="loginPanel" class="panel"><h2>Admin Login</h2><p class="note">শুধু অনুমোদিত অ্যাডমিন অ্যাকাউন্ট দিয়ে লগইন করুন। এই পেজে public sign-up নেই।</p><div class="formgrid"><div class="field"><label for="email">ইমেইল</label><input id="email" type="email" autocomplete="username" placeholder="Admin email"></div><div class="field"><label for="password">পাসওয়ার্ড</label><input id="password" type="password" autocomplete="current-password" placeholder="Password"></div></div><div class="actions"><button id="loginBtn" class="btn" type="button">Login</button><button id="logoutBtn" class="btn red hidden" type="button">Logout</button></div></section>
+<section id="productPanel" class="panel"><h2 id="formTitle">নতুন প্রোডাক্ট যোগ করুন</h2><p class="note">ছবির জন্য সরাসরি image URL ব্যবহার করুন। সংরক্ষণ হলে পণ্যটি সবার ওয়েবসাইটে দেখা যাবে।</p><form id="productForm"><input id="productId" type="hidden"><div class="formgrid">
+<div class="field"><label for="pname">পণ্যের নাম *</label><input id="pname" required maxlength="100" placeholder="যেমন: 8x Zoom Mobile Lens"></div>
+<div class="field"><label for="price">দাম (৳) *</label><input id="price" required type="number" min="0" step="1" placeholder="850"></div>
+<div class="field full"><label for="imageUrl">ছবির URL *</label><input id="imageUrl" required type="url" placeholder="https://example.com/product.jpg"></div>
+<div class="field full"><label for="description">বিবরণ</label><textarea id="description" rows="3" maxlength="1000" placeholder="পণ্যের বিস্তারিত লিখুন"></textarea></div>
+<div class="field"><label for="category">ক্যাটাগরি</label><input id="category" maxlength="60" placeholder="Mobile Accessories"></div>
+<div class="field"><label for="active">স্ট্যাটাস</label><select id="active"><option value="true">ওয়েবসাইটে দেখান</option><option value="false">লুকিয়ে রাখুন</option></select></div>
+</div><div class="actions"><button class="btn green" type="submit">প্রোডাক্ট সংরক্ষণ</button><button id="cancelEdit" class="btn light hidden" type="button">বাতিল</button></div></form></section>
+<section><div id="productGrid" class="grid"><div class="empty">পণ্য লোড হচ্ছে…</div></div></section>
+</main>
+<footer><div class="wrap">© <span id="year"></span> Ayan Gadget Hub · <a href="https://wa.me/8801971177205" target="_blank" rel="noopener">WhatsApp-এ অর্ডার করুন</a></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./config.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+$('year').textContent=new Date().getFullYear();
+let supabaseClient=null,session=null,products=[];
+function showStatus(message){$('status').textContent=message;$('status').classList.add('show')}
+function clearStatus(){$('status').classList.remove('show')}
+function configured(){return window.AYAN_SUPABASE_CONFIG&&window.AYAN_SUPABASE_CONFIG.url&&window.AYAN_SUPABASE_CONFIG.anonKey&&!window.AYAN_SUPABASE_CONFIG.url.includes('YOUR_')&&!window.AYAN_SUPABASE_CONFIG.anonKey.includes('YOUR_')}
+if(configured()&&window.supabase){supabaseClient=window.supabase.createClient(window.AYAN_SUPABASE_CONFIG.url,window.AYAN_SUPABASE_CONFIG.anonKey);supabaseClient.auth.getSession().then(({data})=>{session=data.session;updateAdminUI();loadProducts()});supabaseClient.auth.onAuthStateChange((_event,newSession)=>{session=newSession;updateAdminUI()})}
+else{showStatus('সাইটের প্রোডাক্ট ডেটাবেস এখনো সংযুক্ত হয়নি। config.js-এ Supabase Project URL ও anon key বসানোর পর পণ্য যোগ ও সংরক্ষণ চালু হবে।');renderProducts([])}
+function updateAdminUI(){$('productPanel').classList.toggle('show',!!session);$('loginBtn').classList.toggle('hidden',!!session);$('logoutBtn').classList.toggle('hidden',!session);if(session)clearStatus()}
+async function loadProducts(){if(!supabaseClient)return;const {data,error}=await supabaseClient.from('products').select('*').eq('active',true).order('created_at',{ascending:false});if(error){showStatus('প্রোডাক্ট লোড করা যায়নি। Supabase-এর setup SQL চালানো হয়েছে কি না যাচাই করুন।');renderProducts([]);return}products=data||[];renderProducts(products)}
+function renderProducts(items){const query=$('search').value.trim().toLowerCase();const visible=items.filter(p=>String(p.name||'').toLowerCase().includes(query)||String(p.category||'').toLowerCase().includes(query));const grid=$('productGrid');grid.innerHTML='';if(!visible.length){const d=document.createElement('div');d.className='empty';d.textContent=query?'এই নামে কোনো পণ্য পাওয়া যায়নি।':'প্রোডাক্ট যোগ করা হলে এখানে দেখা যাবে।';grid.appendChild(d);return}visible.forEach(p=>{const card=document.createElement('article');card.className='card';const img=document.createElement('img');img.className='photo';img.src=p.image_url;img.alt=p.name;img.loading='lazy';img.onerror=()=>{img.removeAttribute('src');img.alt='ছবি লোড হয়নি'};const body=document.createElement('div');body.className='cardbody';const title=document.createElement('h3');title.textContent=p.name;const price=document.createElement('div');price.className='price';price.textContent='৳ '+Number(p.price).toLocaleString('en-BD');const desc=document.createElement('div');desc.className='desc';desc.textContent=p.description||p.category||'';const order=document.createElement('a');order.className='btn green';order.target='_blank';order.rel='noopener';order.href='https://wa.me/8801971177205?text='+encodeURIComponent('আসসালামু আলাইকুম, আমি এই পণ্যটি অর্ডার করতে চাই: '+p.name+' | দাম: ৳'+p.price);order.textContent='WhatsApp-এ অর্ডার';body.append(title,price,desc,order);if(session){const edit=document.createElement('button');edit.className='btn';edit.type='button';edit.textContent='Edit';edit.onclick=()=>fillForm(p);const del=document.createElement('button');del.className='btn red';del.type='button';del.textContent='Delete';del.onclick=()=>deleteProduct(p.id);body.append(edit,del)}card.append(img,body);grid.appendChild(card)})}
+$('search').addEventListener('input',()=>renderProducts(products));
+$('adminToggle').onclick=()=>{$('loginPanel').classList.toggle('show');$('email').focus()};
+$('loginBtn').onclick=async()=>{clearStatus();if(!supabaseClient){showStatus('Admin Login চালু করতে আগে config.js-এ Supabase সংযোগ বসাতে হবে।');return}const {error}=await supabaseClient.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});if(error)showStatus('Login হয়নি। ইমেইল/পাসওয়ার্ড ও Supabase Auth user যাচাই করুন।');else{$('loginPanel').classList.remove('show');showStatus('Admin হিসেবে লগইন হয়েছে।')}};
+$('logoutBtn').onclick=async()=>{await supabaseClient.auth.signOut();resetForm();showStatus('Logout সম্পন্ন হয়েছে।')};
+function fillForm(p){$('productId').value=p.id;$('pname').value=p.name;$('price').value=p.price;$('imageUrl').value=p.image_url;$('description').value=p.description||'';$('category').value=p.category||'';$('active').value=String(p.active);$('formTitle').textContent='প্রোডাক্ট পরিবর্তন করুন';$('cancelEdit').classList.remove('hidden');window.scrollTo({top:$('productPanel').offsetTop,behavior:'smooth'})}
+function resetForm(){$('productForm').reset();$('productId').value='';$('formTitle').textContent='নতুন প্রোডাক্ট যোগ করুন';$('cancelEdit').classList.add('hidden')}
+$('cancelEdit').onclick=resetForm;
+$('productForm').onsubmit=async e=>{e.preventDefault();if(!session||!supabaseClient){showStatus('প্রোডাক্ট যোগ করতে Admin Login করতে হবে।');return}const id=$('productId').value;const item={name:$('pname').value.trim(),price:Number($('price').value),image_url:$('imageUrl').value.trim(),description:$('description').value.trim(),category:$('category').value.trim(),active:$('active').value==='true'};const result=id?await supabaseClient.from('products').update(item).eq('id',id).select():await supabaseClient.from('products').insert(item).select();if(result.error){showStatus('সংরক্ষণ হয়নি। Supabase setup SQL ও admin permission যাচাই করুন।');return}resetForm();showStatus('প্রোডাক্ট সংরক্ষণ হয়েছে।');await loadProducts()};
+async function deleteProduct(id){if(!session||!confirm('এই পণ্যটি মুছে ফেলবেন?'))return;const {error}=await supabaseClient.from('products').delete().eq('id',id);if(error){showStatus('পণ্য মুছতে সমস্যা হয়েছে।');return}showStatus('পণ্য মুছে ফেলা হয়েছে।');await loadProducts()}
+</script>
+</body></html>
